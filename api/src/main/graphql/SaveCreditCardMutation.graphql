@@ -1,0 +1,10 @@
+mutation SaveCreditCard($accessToken: String!, $creditCardNumber: String!) {
+  saveCreditCard(accessToken: $accessToken, creditCardNumber: $creditCardNumber) {
+    user {
+      creditCardNumber
+    }
+    error {
+      text
+    }
+  }
+}

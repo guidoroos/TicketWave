@@ -1,0 +1,9 @@
+nl.guidoroos.ticketwave.api-pngs-0 /Users/guido/AndroidStudioProjects/TicketWave/api/build/generated/res/pngs/debug
+nl.guidoroos.ticketwave.api-updated_navigation_xml-1 /Users/guido/AndroidStudioProjects/TicketWave/api/build/generated/updated_navigation_xml/debug
+nl.guidoroos.ticketwave.api-mergeDebugResources-2 /Users/guido/AndroidStudioProjects/TicketWave/api/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
+nl.guidoroos.ticketwave.api-mergeDebugResources-3 /Users/guido/AndroidStudioProjects/TicketWave/api/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+nl.guidoroos.ticketwave.api-debug-4 /Users/guido/AndroidStudioProjects/TicketWave/api/build/intermediates/merged_res/debug/mergeDebugResources
+nl.guidoroos.ticketwave.api-debug-5 /Users/guido/AndroidStudioProjects/TicketWave/api/build/intermediates/packaged_res/debug/packageDebugResources
+nl.guidoroos.ticketwave.api-debug-6 /Users/guido/AndroidStudioProjects/TicketWave/api/src/debug/res
+nl.guidoroos.ticketwave.api-main-7 /Users/guido/AndroidStudioProjects/TicketWave/api/src/main/res
+gradleHome-0 /Users/guido/.gradle

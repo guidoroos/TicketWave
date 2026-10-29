@@ -1,0 +1,7 @@
+mutation RemoveFromCart($accessToken: String!, $ticketId: ID!) {
+  removeTicketFromCart(accessToken: $accessToken, ticketId: $ticketId) {
+    error {
+      text
+    }
+  }
+}

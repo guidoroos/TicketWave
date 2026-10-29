@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="nl.guidoroos.ticketwave.api.repository.AuthRepositoryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-28T11:16:21.643Z" hostname="Mac.home" time="0.009">
+  <properties/>
+  <testcase name="testLoginEmptyResponse" classname="nl.guidoroos.ticketwave.api.repository.AuthRepositoryTest" time="0.001"/>
+  <testcase name="testGetToken" classname="nl.guidoroos.ticketwave.api.repository.AuthRepositoryTest" time="0.002"/>
+  <testcase name="testLoginSuccessData" classname="nl.guidoroos.ticketwave.api.repository.AuthRepositoryTest" time="0.001"/>
+  <testcase name="testLoginErrorResponse" classname="nl.guidoroos.ticketwave.api.repository.AuthRepositoryTest" time="0.001"/>
+  <testcase name="testCheckAuthTrue" classname="nl.guidoroos.ticketwave.api.repository.AuthRepositoryTest" time="0.001"/>
+  <testcase name="testCheckAuthFalse" classname="nl.guidoroos.ticketwave.api.repository.AuthRepositoryTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

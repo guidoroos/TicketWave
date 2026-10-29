@@ -1,0 +1,7 @@
+mutation AddTicketToCart($accessToken: String!, $ticketId: ID!) {
+  addTicketToCart(accessToken: $accessToken, ticketId: $ticketId) {
+    error {
+      text
+    }
+  }
+}

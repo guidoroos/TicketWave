@@ -1,0 +1,135 @@
+add a domain and ui module, only keep application in app module
+
+add navigation 3
+
+setup koin for di
+
+implement login screen and auth repository using apollo client
+
+add bottom navigation bar with home, tickets, and basket screens
+
+add home screen displaying events list with search bar
+
+add event detail screen and wire up navigation
+
+add basket screen with item counters and credit card view
+
+add checkout screen and payment method screen
+
+add settings profile screen
+
+remove the unused import kotlinx.coroutines.Dispatchers from HomeViewModel.kt
+
+without init method in vm
+
+simplify uiState without underscore is just a flow now, it sets the value in what is now _uitstate, returns no value
+
+no a separate mutablestateflow for query, source of truth, not in the uistate
+
+the search bar needs when not empty a cross icon to clear
+
+we gaan het doen met optimistische ui updates, we fetchen eenmaal, stoppen het in stateflow en die mag aangepast.
+
+gebruik de count overrides om items te hiden welke 0 count zijn
+
+wrong method, need the authenticatedUser method instead for the cart, i find this api very confusing.
+
+call basketrepository userrepository
+
+removing that annoyting item added snackbar on plus minus
+
+remove this pair, and make it BasketState data class, then user mappers to map it in vm (accessToken: String): Result<Pair<List<CartItem>, String?>> also add on basketscreen a simple bottomsheet for entering a number for credit card, it will overiide the old in repo and save it too via api. the validation must run first: The card is validated (length and Luhn).
+
+card for payment should not scroll with tickets
+
+also the getcard should enrich the cartitem with eventimageurl, which should be gotten via a getEvenbyId method.
+
+why o why is eventimageurl set to emptystring?
+
+above the payment method add horzonal divider
+
+CheckoutScreen, same cart data as basket screen. creeat ticketsummary view. title orderoverview then list of summary item, is like basketitem, but with less data and on the end : 2 x 33,00 and on second row total price (formatated). a divider between listitems repeat the card view, repeat the update logic (extrqact a reuable composable for the bottomsheet). then repeat the total also. then primary button confirm paytment. this should do the checkout api call, add it to payment repository
+
+ok, also after success "payument" then show succes message and go to home
+
+Ok then TicketsScreen, like for basket get tickets via the autenticated user api. just show them in a list, using the same view as in checkoutscreen for listitem
+
+this is ugly, use the image also liek before
+
+er si een repeat van het subtotaal
+
+deze text is te klein 1x 25
+
+this one needs no arrow
+
+make this one a scrollable list for chips
+
+remove unused cart repo and ticketsrepo
+
+voeg deze toe implementation("com.apollographql.apollo:apollo-normalized-cache"
+
+use this instead 'fun ApolloClient.Builder.normalizedCache(normalizedCacheFactory: NormalizedCacheFactory, cacheKeyGenerator: CacheKeyGenerator = ..., cacheResolver: CacheResolver = ..., writeToCacheAsynchronously: Boolean = ...): ApolloClient.Builder' is deprecated. Use the new Normalized Cache at https://github.com/apollographql/apollo-kotlin-normalized-cache.
+
+the eventcard needs to have icons for location and ticket information
+
+the load should only be shown when actually fetching data on home
+
+this should clear backstack, behave3 like bottomsheet item click navController.navigate(Screen.Tickets.route)
+
+no, now when clicking home button from ticket, it goes to profile
+
+do same as this navController.navigate(item.screen.route) { popUpTo(navController.graph.findStartDestination().id) { saveState = true } launchSingleTop = true restoreState = true
+
+add the loading state from homescreen logic also in other if not there yet
+
+the navigation to barcodescreen is broken, why
+
+show barcode under price, not like this man
+
+also barcode screen needs a top toolbar with backbutton
+
+home screen card description too small
+
+ticket added to basket snackbar can go
+
+the profile card has no arrow
+
+profile screen needs english texts, also the navigation to ticketscreen should clear the backstack
+
+the toolbar profile icon is too small
+
+also toolbar items have too small text
+
+deze text is te klein 1x 25
+
+this one needs no arrow
+
+ok extract a ticketpurchaseview for that
+
+the format currentcy needs to be an utility, same used everywhere
+
+Make a scimple user profile, get user name and data from user api call, repeat the payment details view, also the editing and logic. also auth repo is there. like picture but without notification, privacy and support item. add a generic list item with start, content and in the end. arrow for this. see where can use it too
+
+write some simple unit tests for empty responses, error response and succes data. for repository classes. use mockk for mocking apollo client.
+
+dude test the methods not the init
+
+all repositories need a test class
+
+why are login and logout not tested, test empty data, error response and success. also other methods in repos
+
+huh iterate until all methods in every repostiroy impl is tested for empty response, error and succes
+
+call them repositorytest and remove the weird cretion tests
+
+write a readme. only format it and correct spelling etc. architecture choises: ... future improvements: ...
+
+create a prompts.txt with all my prompts, exclude images and all your answers
+
+doe opnieuw format het normaal, dit is onleesbaar, empty line tussen elke prompt
+
+nee heel veel mist, ga terug in de tijd
+
+this is first
+
+add a domain and ui module, only keep application in app module

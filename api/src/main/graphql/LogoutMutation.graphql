@@ -1,0 +1,8 @@
+mutation Logout($accessToken: String!) {
+  logout(accessToken: $accessToken) {
+    ok
+    error {
+      text
+    }
+  }
+}

@@ -1,0 +1,7 @@
+mutation Checkout($accessToken: String!, $creditCardNumber: String!) {
+  checkout(accessToken: $accessToken, creditCardNumber: $creditCardNumber) {
+    error {
+      text
+    }
+  }
+}

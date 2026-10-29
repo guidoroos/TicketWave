@@ -1,0 +1,29 @@
+mutation AuthenticatedUser($accessToken: String!) {
+  authenticatedUser(accessToken: $accessToken) {
+    user {
+      firstName
+      lastName
+      age
+      username
+      creditCardNumber
+      cart {
+        ticketId
+        eventId
+        eventTitle
+        ticketLabel
+        priceCents
+        currency
+      }
+      ticketWallet {
+        id
+        label
+        priceCents
+        currency
+        barcode
+      }
+    }
+    error {
+      text
+    }
+  }
+}

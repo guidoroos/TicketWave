@@ -1,0 +1,66 @@
+{
+    "format": "apollo-persisted-query-manifest",
+    "version": 1,
+    "operations": [
+        {
+            "id": "77352b8ba2c6870d83649d4cfa9bef1089767fc1e6b7dec5a87248297ae58e9a",
+            "body": "mutation AddTicketToCart($accessToken: String!, $ticketId: ID!) { addTicketToCart(accessToken: $accessToken, ticketId: $ticketId) { error { text } } }",
+            "name": "AddTicketToCart",
+            "type": "mutation"
+        },
+        {
+            "id": "8627a836cbe9e7654f6dcf8836c657b5f47dd8acb7e7b7383a286c52f9c1d978",
+            "body": "mutation AuthenticatedUser($accessToken: String!) { authenticatedUser(accessToken: $accessToken) { user { firstName lastName age username creditCardNumber cart { ticketId eventId eventTitle ticketLabel priceCents currency } ticketWallet { id label priceCents currency barcode } } error { text } } }",
+            "name": "AuthenticatedUser",
+            "type": "mutation"
+        },
+        {
+            "id": "42ebb0b52412b63c14277ab700808a5bf322a296d61370158350d63d6dd0c601",
+            "body": "mutation Checkout($accessToken: String!, $creditCardNumber: String!) { checkout(accessToken: $accessToken, creditCardNumber: $creditCardNumber) { error { text } } }",
+            "name": "Checkout",
+            "type": "mutation"
+        },
+        {
+            "id": "a6f359cf253e80b3c27f7d618f120c37ea24f2f9341efefb07e74a33c835b8d0",
+            "body": "query Event($id: ID!) { event(id: $id) { event { id title description startsAt venue { id name imageUrl } tickets { id label priceCents currency quantityAvailable } imageUrl } error { text } } }",
+            "name": "Event",
+            "type": "query"
+        },
+        {
+            "id": "664ecb6dee775a6f85c414e493a6499285bb3ef2ae6d1dd3043001be6c5e998e",
+            "body": "query Events { events { events { id title description startsAt venue { id name imageUrl } tickets { id label priceCents currency quantityAvailable } imageUrl } error { text } } }",
+            "name": "Events",
+            "type": "query"
+        },
+        {
+            "id": "a086b361b1d5fbe2bd2c063830c0a36afdae57f9a061f64f467ebb3efdf33687",
+            "body": "mutation Login($username: String!, $password: String!) { login(username: $username, password: $password) { accessToken error { text } } }",
+            "name": "Login",
+            "type": "mutation"
+        },
+        {
+            "id": "6b4f0d74989d95daa57e0dadc30aadc2f264519d8571686e994fb1c488aeb202",
+            "body": "mutation Logout($accessToken: String!) { logout(accessToken: $accessToken) { ok error { text } } }",
+            "name": "Logout",
+            "type": "mutation"
+        },
+        {
+            "id": "ebd7d779f50b9c3a41a9e23d3a36a8cd930c6c4495776070faf6e7366fb8fa29",
+            "body": "mutation RemoveFromCart($accessToken: String!, $ticketId: ID!) { removeTicketFromCart(accessToken: $accessToken, ticketId: $ticketId) { error { text } } }",
+            "name": "RemoveFromCart",
+            "type": "mutation"
+        },
+        {
+            "id": "6289d3aa645adc187283b8592a8981102933999bca32dec14a7151de1d962471",
+            "body": "mutation SaveCreditCard($accessToken: String!, $creditCardNumber: String!) { saveCreditCard(accessToken: $accessToken, creditCardNumber: $creditCardNumber) { user { creditCardNumber } error { text } } }",
+            "name": "SaveCreditCard",
+            "type": "mutation"
+        },
+        {
+            "id": "5ab51709aef5e0d44a23f2a4028f6105135dc629717f15f8ff5516e7a0783abe",
+            "body": "query SearchEvents($query: String!) { searchEvents(query: $query) { events { id title description startsAt venue { id name imageUrl } tickets { id label priceCents currency quantityAvailable } imageUrl } error { text } } }",
+            "name": "SearchEvents",
+            "type": "query"
+        }
+    ]
+}

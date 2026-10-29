@@ -1,0 +1,26 @@
+query SearchEvents($query: String!) {
+  searchEvents(query: $query) {
+    events {
+      id
+      title
+      description
+      startsAt
+      venue {
+        id
+        name
+        imageUrl
+      }
+      tickets {
+        id
+        label
+        priceCents
+        currency
+        quantityAvailable
+      }
+      imageUrl
+    }
+    error {
+      text
+    }
+  }
+}
